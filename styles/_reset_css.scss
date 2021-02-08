@@ -1,0 +1,33 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  // 1rem = 10px, 12px = 1.2rem
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+} 
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: $font-family-sans;
+  transition: background-color $transition-slow, color $transition-slow;
+}
+
+button, .logo-link {
+  font-family: $font-family-sans;
+  font-size: 0;
+  cursor: pointer;
+}
+
+button {
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+}

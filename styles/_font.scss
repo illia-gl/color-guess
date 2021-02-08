@@ -1,0 +1,37 @@
+/* open-sans-regular - latin */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local(''),
+        url('../assets/fonts/open-sans/open-sans-regular.woff2') format('woff2'),
+        url('../assets/fonts/open-sans/open-sans-regular.woff') format('woff'),
+        url('../assets/fonts/open-sans/open-sans-regular.ttf') format('truetype'),
+        
+}
+  
+/* open-sans-600 - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local(''),
+    url('../assets/fonts/open-sans/open-sans-semi-bold.woff2') format('woff2'),
+    url('../assets/fonts/open-sans/open-sans-semi-bold.woff') format('woff'),
+    url('../assets/fonts/open-sans/open-sans-semi-bold.ttf') format('truetype'),
+}
+
+/* open-sans-700 - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local(''),
+    url('../assets/fonts/open-sans/open-sans-bold.woff2') format('woff2'),
+    url('../assets/fonts/open-sans/open-sans-bold.woff') format('woff'),
+    url('../assets/fonts/open-sans/open-sans-bold.ttf') format('truetype'),
+}
+  

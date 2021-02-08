@@ -1,0 +1,50 @@
+body.darkmode {
+  background-color: $main-bg-dark;
+
+  .logo {
+    fill: $high-contrast-dark;
+  }
+
+  .darkmode-icon{
+    fill: $high-contrast-dark;
+  }
+
+  .icon-dark {
+    display: none;
+  }
+
+  .icon-light {
+    display: block;
+  }
+
+  [data-tooltip]::before {
+    border-color:  transparent  transparent $component-bg-dark transparent;
+  }
+
+  [data-tooltip]::after {
+    color: $high-contrast-dark;
+    background-color: $component-bg-dark;
+  }
+
+  h1, h2 {
+    color: $high-contrast-dark;
+  }
+
+  .card {
+    filter: brightness(0.8);
+  }
+
+  .restart-btn {
+    color: $high-contrast-dark;
+    background-color: $component-bg-dark;
+
+    &:hover, &:focus {
+      background-color: $hover-dark;
+    }
+
+    .restart-icon {
+      fill: $high-contrast-dark;
+    }
+  }
+
+}

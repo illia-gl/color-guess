@@ -1,0 +1,224 @@
+@import './font';
+@import './variables';
+@import './reset_css';
+@import './darkmode';
+
+
+header, main, .restart-btn {
+  display: flex;
+  align-items: center;
+}
+
+header {
+  position: fixed;
+  justify-content: space-between;
+  width: 90%;
+  height: 11.6rem;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media(max-width: 768px){
+    height: 6.4rem;
+  }
+}
+
+.logo {
+  fill: $high-contrast-light;
+}
+
+.darkmode-icon {
+  fill: $high-contrast-light;
+}
+
+.icon-light {
+    display: none;
+}
+
+[data-tooltip] {
+    position: relative;
+
+    &::before, &::after{
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-0.4rem);
+        transition: opacity $transition-default, transform $transition-default,
+                    visibility $transition-default, background-color $transition-default,
+                    border-color $transition-default, color $transition-default;
+    }
+
+    &::before {
+        top: 2.1rem;
+        left: 0.7rem;
+        content: '';
+        border-style: solid;
+        border-width: 5px 5px 5px 5px; /* CSS triangle */
+        border-color:  transparent  transparent $tooltip-bg-light transparent;
+    }
+
+    &::after {
+        right: -2.3rem;
+        top: 3rem;
+        width: 7.4rem;
+        padding: 0.7rem 0.5rem;
+        color: $high-contrast-light;
+        background-color: $tooltip-bg-light;
+        content: attr(data-tooltip);
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: $regular;
+        border-radius: 0.8rem;
+    }
+
+    &:hover::after, &:hover::before {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0rem);
+    }
+
+    @media(max-width: 768px){
+        &::before, &::after {
+            display: none;
+        }
+    }
+}
+
+main {
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+h1, h2 {
+  margin-top: 0;
+  text-align: center;
+  color: $high-contrast-light;
+}
+
+h1 {
+  margin-bottom: 4.8rem;
+  font-weight: $bold;
+  font-size: 3.4rem;
+  line-height: 0.734;
+  letter-spacing: 0.25px;
+
+  @media(max-width: 768px){
+    margin-bottom: 2.4rem;
+    font-size: 2.4rem;
+  }
+}
+
+h2 {
+  margin-bottom: 6.4rem;
+  font-weight: $semi-bold;
+  font-size: 2.4rem;
+  line-height: 0.73;
+  letter-spacing: 0.15px;
+
+  @media(max-width: 768px){
+    margin-bottom: 3.2rem;
+    font-size: 1.6rem;
+  }
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6.4rem 4.8rem;
+
+  @media(max-width: 570px){
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.6rem 1.6rem;
+  }
+
+  @media(min-width: 571px ) and (max-width: 768px){
+    gap: 3.2rem 2.4rem;
+  }
+}
+
+.card {
+  width: 25rem;
+  padding-top: 23rem;
+  background-color: teal;
+  border-radius: $border-radius-default;
+  cursor: pointer;
+  transition:  background-color $transition-default, opacity $transition-default,
+                box-shadow $transition-slow, transform $transition-default,
+                visibility $transition-default, filter $transition-default;
+
+  &:hover, &:focus {
+    transform: scale(1.03);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  @media(max-width: 570px) {
+    width: 10.6rem;
+    padding-top: 9.6rem;
+    border-radius: $border-radius-small;
+  }
+
+  @media(min-width: 571px) and (max-width: 768px) {
+    width: 15.5rem;
+    padding-top: 14.2rem;
+    border-radius: $border-radius-default;
+  }
+
+}
+
+.controls {
+  position: absolute;
+  bottom: 5%;
+}
+
+.restart-btn {
+  justify-content: center;
+  width: 32rem;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  border-radius: $border-radius-large;
+  color: $high-contrast-light;
+  background-color: $component-bg-light;
+  outline-offset: 0.4rem;
+  font-size: 1.6rem;
+  font-weight: $semi-bold;
+  line-height: 1.375;
+  transition: background-color $transition-default;
+
+  &:hover, &:focus {
+    background-color: $hover-light;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  @media(max-width: 768px) {
+    width: 18rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    font-size: 1.2rem;
+    border-radius: 2rem;
+  }
+}
+
+.restart-icon {
+  margin-right: 0.8rem;
+  fill: $high-contrast-light;
+
+  @media(max-width: 768px) {
+    display: none;
+  }
+}
+
+.restart-small {
+  display: none;
+  
+  @media(max-width: 768px) {
+    display: block;
+  }
+}

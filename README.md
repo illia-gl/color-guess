@@ -4,7 +4,7 @@
 
 
 <h1>Color Guess</h1>
-<a href="https://illia-gl.github.io/color-guess/">Play</a>
+<h3><a href="https://illia-gl.github.io/color-guess/">Play</a></h3>
 
 A simple game where the main goal of the six proposed color options is to guess the correct one according to the given RGB numbers.
 
